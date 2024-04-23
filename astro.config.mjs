@@ -19,7 +19,8 @@ export default defineConfig({
         build: {
             rollupOptions: {
                 output: {
-                    entryFileNames: `assets/js/[name].js`,
+                    // TODO: Для Битрикса - Разный путь в зависимости от режима сборки (DEV | PROD)
+                    entryFileNames: `assets/[name].js`,
                     assetFileNames: 'assets/css/[name][extname]'
                 }
             }
