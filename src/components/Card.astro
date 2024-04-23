@@ -10,7 +10,7 @@ const { href, title, body } = Astro.props;
 const test = 'Test info';
 ---
 
-<li class="link-card link-card_test">
+<li class="link-card">
 	<a href={href} target="_blank">
 		<h2>
 			{title}
@@ -24,6 +24,10 @@ const test = 'Test info';
 		</p>
 	</a>
 </li>
+<script>
+    const cards = document.querySelectorAll('.link-card');
+    console.log(cards);
+</script>
 <style>
 	.link-card {
 		list-style: none;
