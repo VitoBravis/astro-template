@@ -6,6 +6,7 @@ import react from "@astrojs/react";
 export default defineConfig({
     build: {
         inlineStylesheets: 'never',
+        assetsPrefix: 'test'
     },
     compressHTML: false,
     integrations: [react()],
