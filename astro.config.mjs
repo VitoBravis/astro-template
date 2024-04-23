@@ -4,5 +4,23 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()]
+    build: {
+        inlineStylesheets: 'never',
+    },
+    compressHTML: false,
+    integrations: [react()],
+    vite: {
+        css: {
+            modules: {
+                generateScopedName: (name, _file, _css) => name
+            }
+        },
+        build: {
+            rollupOptions: {
+                output: {
+                    assetFileNames: 'assets/[name][extname]',
+                }
+            }
+        }
+    }
 });

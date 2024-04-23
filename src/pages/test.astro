@@ -4,5 +4,10 @@ import Intro from '../components/react/intro/intro';
 ---
 
 <Layout title="Astro: Test">
-    <Intro title="Test"/>
+    <Intro title="Load" client:load />
+    <Intro title="Idle" client:idle />
+    <Intro title="Visible" client:visible />
+    <Intro title="Visible 200px" client:visible={{ rootMargin: '200px'}} />
+    <Intro title="Media" client:media="(max-width: 768px)" />
+    <Intro title="React CSR" client:only="react" />
 </Layout>

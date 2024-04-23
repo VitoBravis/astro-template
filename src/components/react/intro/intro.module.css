@@ -2,15 +2,17 @@
     width: 100vw;
     padding: 20px;
     background-color: lightblue;
-
-    hr {
-        margin-top: 10px;
-        background-color: red;
-    }
+    margin-bottom: 40px;
+    border-radius: 40px;
+    overflow: hidden;
 }
 
 .title {
     width: 100%;
     text-align: center;
-    text-transform: uppercase;
+}
+
+hr {
+    margin-top: 10px;
+    background-color: red;
 }
