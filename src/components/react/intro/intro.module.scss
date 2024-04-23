@@ -5,14 +5,14 @@
     margin-bottom: 40px;
     border-radius: 40px;
     overflow: hidden;
+
+    hr {
+        margin-top: 10px;
+        background-color: red;
+    }
 }
 
 .title {
     width: 100%;
     text-align: center;
-}
-
-hr {
-    margin-top: 10px;
-    background-color: red;
 }

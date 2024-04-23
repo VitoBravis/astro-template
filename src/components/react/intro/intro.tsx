@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import type { ReactFC } from "../../../types/index";
-import styles from './intro.module.css';
+import styles from './intro.module.scss';
 
 interface Props extends ReactFC {
     title: string;
@@ -11,7 +11,6 @@ const Intro: React.FC<Props> = ({ children, title }) => {
 
     useEffect(() => {
         console.log(window);
-        console.log('test');
     }, [])
 
     return (
