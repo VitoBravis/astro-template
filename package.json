@@ -6,6 +6,7 @@
         "dev": "astro dev",
         "start": "astro dev",
         "build": "astro check && astro build",
+        "build:prod": "astro check && cross-env BUILD_BX=true astro build",
         "preview": "astro preview",
         "astro": "astro"
     },
