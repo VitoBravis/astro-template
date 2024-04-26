@@ -1,0 +1,31 @@
+/**
+* Стили для каждого модуля подключаются по необходимости
+* https://swiperjs.com/swiper-api#scss-styles
+*/
+
+@use '../../../node_modules/swiper/swiper';
+
+//@use '../../../node_modules/swiper/modules/a11y/a11y';
+//@use '../../../node_modules/swiper/modules/autoplay/autoplay';
+//@use '../../../node_modules/swiper/modules/controller/controller';
+//@use '../../../node_modules/swiper/modules/effect-cards/effect-cards';
+//@use '../../../node_modules/swiper/modules/effect-coverflow/effect-coverflow';
+//@use '../../../node_modules/swiper/modules/effect-creative/effect-creative' ;
+//@use '../../../node_modules/swiper/modules/effect-cube/effect-cube' ;
+//@use '../../../node_modules/swiper/modules/effect-fade/effect-fade' ;
+//@use '../../../node_modules/swiper/modules/effect-flip/effect-flip';
+//@use '../../../node_modules/swiper/modules/free-mode/free-mode' ;
+//@use '../../../node_modules/swiper/modules/grid/grid' ;
+//@use '../../../node_modules/swiper/modules/hash-navigation/hash-navigation' ;
+//@use '../../../node_modules/swiper/modules/history/history';
+//@use '../../../node_modules/swiper/modules/keyboard/keyboard' ;
+//@use '../../../node_modules/swiper/modules/lazy/lazy';
+//@use '../../../node_modules/swiper/modules/manipulation/manipulation';
+//@use '../../../node_modules/swiper/modules/mousewheel/mousewheel';
+//@use '../../../node_modules/swiper/modules/navigation/navigation' ;
+//@use '../../../node_modules/swiper/modules/pagination/pagination' ;
+//@use '../../../node_modules/swiper/modules/parallax/parallax';
+//@use '../../../node_modules/swiper/modules/scrollbar/scrollbar' ;
+//@use '../../../node_modules/swiper/modules/thumbs/thumbs' ;
+//@use '../../../node_modules/swiper/modules/virtual/virtual';
+//@use '../../../node_modules/swiper/modules/zoom/zoom';

@@ -1,4 +1,6 @@
-.container {
+@use 'src/app/scss/members' as *;
+
+.intro {
     width: 100vw;
     padding: 20px;
     background-color: lightblue;
@@ -10,9 +12,11 @@
         margin-top: 10px;
         background-color: red;
     }
-}
 
-.title {
-    width: 100%;
-    text-align: center;
+    &__title {
+        width: 100%;
+        text-align: center;
+
+        @extend %h-1;
+    }
 }

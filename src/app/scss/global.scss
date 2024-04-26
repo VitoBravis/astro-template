@@ -1,0 +1,131 @@
+@use "members" as *;
+
+html {
+    font-family: $font-roboto;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    position: relative;
+    //height: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    //height: 100%;
+    -webkit-tap-highlight-color: transparent;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+h1, h2, h3, h4, h5, p, a {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+    padding: 0;
+    margin: 0;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    border: none;
+    background: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    background: transparent;
+    border: none;
+    font-family: $font-roboto;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+[data-barba="container"] {
+    position: relative;
+}
+
+.object-fit {
+    &-cover {
+        object-fit: cover;
+    }
+}
+
+.image-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    img,
+    video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    @media print {
+        position: relative;
+        width: auto;
+        height: auto;
+        margin: 0;
+        white-space: normal;
+        clip-path: none;
+        overflow: visible;
+    }
+}
+
+[data-modal] {
+    cursor: pointer;
+}

@@ -1,0 +1,16 @@
+@use "members" as *;
+
+$colors: (
+    white: #fff,
+    black: #000,
+);
+
+// Для каждого цвета дополнительно создается переменная с суффиксом -rgb для использования в rgba функциях
+:root {
+    @if $colors {
+        @each $key, $value in $colors {
+            --#{"" + $key}: #{$value};
+            --#{"" + $key}-rgb: #{red($value), green($value), blue($value)};
+        }
+    }
+}

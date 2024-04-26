@@ -1,0 +1,7 @@
+:root {
+    // Поля до границ экрана
+    @include adaptive-smooth-values(--offset-side, 20, 20, 128, 143, 190);
+
+    // Отступы из UI-кита
+    @include adaptive-hard-values(--offset-2, 2, null, null, null, 2);
+}

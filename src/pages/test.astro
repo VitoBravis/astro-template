@@ -1,10 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Intro from '../components/react/intro/intro';
+import Slider from '../components/react/slider/slider';
+import testData from '../assets/data/test.json';
 ---
 
 <Layout title="Astro: Test">
-    <Intro title="Load" client:load />
+    <Intro {...testData} client:load />
+    <Slider title="Test Slider"/>
     <Intro title="Idle" client:idle />
     <Intro title="Visible" client:visible />
     <Intro title="Visible 200px" client:visible={{ rootMargin: '200px'}} />

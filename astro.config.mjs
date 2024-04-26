@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import {defineConfig} from 'astro/config';
 import react from "@astrojs/react";
 
 // https://astro.build/config
@@ -13,15 +13,18 @@ export default defineConfig({
     vite: {
         css: {
             modules: {
-                generateScopedName: (name, _file, _css) => name
+                generateScopedName: (name, file, _css) => {
+                    const fileArr = file.split('/');
+                    const fileName = fileArr[fileArr.length - 1];
+                    return `${fileName.replace('.module.scss', '')}__${name}`
+                }
             }
         },
         build: {
             rollupOptions: {
                 output: {
-                    // TODO: Для Битрикса - Разный путь в зависимости от режима сборки (DEV | PROD)
-                    entryFileNames: `assets/[name].js`,
-                    assetFileNames: 'assets/css/[name][extname]'
+                    entryFileNames: `local/templates/main/js/[name].js`,
+                    // assetFileNames: 'local/templates/main/css/[name][extname]'
                 }
             }
         }

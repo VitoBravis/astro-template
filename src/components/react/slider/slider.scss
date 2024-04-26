@@ -1,0 +1,9 @@
+@use 'src/app/scss/members' as *;
+
+.slider {
+    position: relative;
+
+    &__text {
+        @extend %body-1;
+    }
+}

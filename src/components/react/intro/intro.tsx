@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
 import type { ReactFC } from "../../../types/index";
-import styles from './intro.module.scss';
 
 interface Props extends ReactFC {
     title: string;
+    text?: string;
 }
 
-const Intro: React.FC<Props> = ({ children, title }) => {
+const Intro: React.FC<Props> = ({ children, title , text}) => {
     const [x, setX] = useState(0);
 
     useEffect(() => {
@@ -14,12 +14,10 @@ const Intro: React.FC<Props> = ({ children, title }) => {
     }, [])
 
     return (
-        <div className={styles.container} onClick={() => setX(x + 1)}>
-            <h1 className={styles.title}>{title}</h1>
+        <div className={'intro'} onClick={() => setX(x + 1)}>
+            <h1 className={'intro__title'}>{title}</h1>
             <hr/>
-            <span>
-                {x}
-            </span>
+            <p>{text}<span> {x}</span></p>
         </div>
     )
 }
